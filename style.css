@@ -1,0 +1,549 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #3b73dbfa;
+    color:  #ffffff;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left {
+    margin-top: 5%;
+    width: 30%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.left .playersName {
+    border: 1px solid #eee;
+    width: 70%;
+    box-sizing: border-box;
+    padding: 6px;
+    border-radius: 7px;
+    margin: 0 15px 15px 15px;
+}
+
+.left .buttonPlayerAutomatic {
+    width: 55px;
+    background: #3b73dbfa;
+    height: 20px;
+    position: absolute;
+    top: 11%;
+    right: 19%;
+    border-radius: 20px;
+}
+
+.left .buttonPlayerAutomatic-ball {
+    width: 15px;
+    background: #fff;
+    height: 15px;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+.left .player2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.typeMatch {
+    width: 100%;
+    text-align: center;
+}
+
+.gameType {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 15px 0px;
+}
+
+.departureType {
+    width: 55px;
+    background: #3b73dbfa;
+    height: 21px;
+    position: absolute;
+    border-radius: 20px;
+    border: 1px solid #fff;
+}
+
+.departureType-ball {
+    width: 15px;
+    background: #fff;
+    height: 15px;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+.playGame {
+    width: 70%;
+    padding: 7px;
+    background: #7fff76;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    outline: none;
+}
+
+.matchHistory {
+    width: 100%;
+    text-align: center;
+    margin: 30px;
+}
+
+.winner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: center;
+    background: #fff;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.winner .winnerText {
+    color: #7fff76;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.winnerName {
+    width: 100%;
+    text-align: center;
+}
+
+.scenario {
+    width: 25%;
+    justify-content: center;
+    margin: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.vitoryScenario {
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.vitoryScenario div {
+    width: 20px;
+    background: #fff;
+    height: 20px;
+    margin: 2px;
+    border-radius: 3px;
+}
+
+.restart {
+    width: 70%;
+    padding: 7px;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    color: #3b73dbfa;
+    outline: none;
+}
+
+.middle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 40%;
+    margin-top: 5%;
+}
+
+.storeboard {
+    width: 70%;
+    background: #fff;
+    color: #3b73dbfa;
+    display: flex;
+    text-align: center;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 10px;
+    margin:  0 15px 15px 15px;
+}
+
+.storeboardPlayer1, .storeboardPlayer2 {
+    width: 30%;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.storeboardName {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.board {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -20%;
+}
+
+.board div{
+    margin: 5px;
+    background: #fff;
+    color: #000;
+    width: 25%;
+    height: 46%;
+    display: block;
+    border-radius: 10px;
+}
+
+.right {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+/*//////////////////////////////// antigo //////////////////*/
+#jog2 {
+    display: flex;
+}
+
+/*Estiliza o botaao na mesma linha que o melhor de 3 e 5*/
+#melhor3ou5 {
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+/*quadrado envolta dos botoes*/
+#quadradoBotaoPlay2 {
+    position: absolute;
+    width: 50px;
+    height: 18px;
+    border-radius: 15px;
+    border:2px solid #fff;
+    background-color: rgba(59, 115, 219, 0.979);
+    margin-top: 29px;
+    margin-left: 220px;
+}
+/*bolinhas do botao*/
+#bolinhaBotao {
+    position: absolute;
+    border-radius:100%;
+    width:15px;
+    height:15px;
+    background-color:#fff;
+    margin-top: 1px;
+    margin-left: 2px;
+}
+#quadradoBotaoMelhor3OU5 {
+    width: 50px;
+    height: 18px;
+    border-radius: 15px;
+    border:2px solid #fff;
+}   
+#bolinhaBotaoMelhor3OU5 {
+    position: relative;
+    border-radius:100%;
+    width:15px;
+    height:15px;
+    background-color:#fff;
+    margin-top: 1px;
+    margin-left: 2px;
+}
+/*Primeira div da esquerda*/
+#part1 {
+    position: absolute;
+    width: 300px;
+    height: 550px;
+    text-align: center;
+    color: #fff;
+    margin-top: 40px;
+    margin-left: 90px;
+    padding: 10px; 
+    background-color: rgba(59, 115, 219, 0.979);
+    
+}
+
+/*Nome dos jogadores*/
+#jogador1 {
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+    color: rgba(59, 115, 219, 0.979);
+    padding: 10px;
+    margin: 20px;
+    width: 240px;
+    justify-content: space-between;
+}
+#jogador2 {
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+    color: rgba(59, 115, 219, 0.979);
+    padding: 10px;
+    margin: 20px;
+    width: 240px;
+    justify-content: space-between;
+}
+
+/*inputs*/
+input {
+    margin: 2px;
+    border-color: white;
+}
+/*botao de jogar*/
+.desabilitar {
+    font-size: 20px;
+    background-color: #63df3e;
+    border-radius: 5px;
+    color: rgba(59, 115, 219, 0.979);
+    padding: 10px;
+    margin: 20px;
+    width: 250px;
+    border: none;
+}
+.desativado {
+    font-size: 20px;
+    background-color: #c9c9c9;
+    border-radius: 5px;
+    color: rgba(59, 115, 219, 0.979);
+    padding: 10px;
+    margin: 20px;
+    width:250px;
+    border: none;
+}
+
+/*loucura pra colocar o vencedor*/
+#vencedor {
+    float: left;
+    background-color: #fff;
+    border-radius: 10px;
+    text-shadow: black;
+    width: 150px;
+}
+#vence {
+    color: rgb(99, 223, 62);
+    font: forte;
+    font-size: 22px;
+}
+#jvence {
+    color:#000;
+}
+#cenario {
+    margin-left: 1px;
+}
+ /* tabuleiro alinhamento dos quadrados*/
+#tabuleiroPequeno {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    margin-bottom: 20px; 
+    margin-top: 40px;
+    margin-left: 100px;
+    
+}
+ /*configuração todos os quadrados do tabuleiro*/
+.tabuleiroPequeno {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        background-color: rgba(59, 115, 219, 0.979);
+        float: left;
+        margin-bottom: 5px;
+        margin-left: 5px;  
+    }
+ /* Botão reiniciar*/
+#reiniciar {
+    position: absolute;
+    font-size: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    color: rgba(59, 115, 219, 0.979);
+    padding: 10px;
+    margin: 20px;
+    margin-top: 100px;
+    width: 230px;
+    margin-top: 600px;
+    margin-left: 130px;
+}
+
+#partida {
+    font-size: 15px;
+    text-align: center;
+}
+#melhor{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 30px;
+}
+#botao{
+    color: #fff;
+    font-size: 30px;
+    border-radius: 7px;
+    background-color: rgb(84, 207, 46);
+    width: 220px;
+    text-align: center;
+    margin-left: 90px;
+}
+ /* conteudo do centro do centro da tela*/
+#part2 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    color: #fff;
+    margin-top: 40px;
+    margin-left: 410px;
+    padding: 10px; 
+    background-color: rgba(59, 115, 219, 0.979);
+}
+ /* pontos sendo marcado em cima do tabuleiro*/
+
+#placar {
+    margin: auto;
+    font-size: 30px; 
+    color: #000;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 300px;
+    height: 60px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+}
+#nomeJogador {
+    font-size: 15px;
+}
+#pontosX {
+    position: absolute;
+    font-size: 60px;
+    color: #000;
+    margin-top: -3px;
+    margin-left: 12px;
+}
+#pontosO{
+    position: absolute;
+    font-size: 60px;
+    color: #000;
+    margin-left: 260px;
+    margin-top: -51px;
+}
+ /*Quadradinhos do tabuleiro*/
+.tabuleiro {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: #fff;
+    float: left;
+    margin-bottom: 5px;
+    margin-left: 5px;  
+    
+}
+#tabuleiro {
+    width: 328px;
+    margin: auto;
+    margin-bottom: 20px; 
+}
+
+#part3 {
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    text-align: center;
+    color: #fff;
+    margin-top: 40px;
+    margin-left: 950px;
+    padding: 10px; 
+    background-color: rgba(59, 115, 219, 0.979);
+}
+.tabuleiro {
+    font-size: 70px;
+    color: #000;
+    text-align: center;
+    
+}
+ /*o X e a O que vão aparecendo durante o jogo*/
+ .tabuleiro {
+    color: black;
+}
+
+
+#historico {
+    margin-top: 30px;
+}
+
+.resposta0{
+    float: left;
+        background-color: rgb(207, 59, 59);
+        border-radius: 10px;
+        text-shadow: black;
+        width: 300px;
+        height: 60px;
+}
+
+.quadradoClicado {
+    color: #000;
+    text-align: center;
+    position: relative;
+    width: 290px;
+    margin-top: -15px;
+}
+#o {
+    font-size: 70px;
+    color: #000;
+
+}
+
+.xo {
+    position: absolute;
+    font-size: 50px;
+    color: #000;
+    text-align: right;
+    margin-left: 250px;
+
+}
+
+.nomeJog {
+    color: #000;
+    position: relative;
+    width: 260px;
+    text-align: center;
+}
+.divsHistorico {
+    width: 300px;
+    height: 60px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 10px;
+    color: #000;
+
+}
